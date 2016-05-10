@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+  "title": "Enable Administrator - Windows 10",
+  "description": "Run this script to enable administrator account",
+  "tags": [
+    "Windows"
+  ],
+  "iconUri": "",
+  "targetOsType": "Windows",
+  "runCommand": {
+    "commandToExecute": "powershell.exe -executionpolicy bypass -File EnableLocalAdminAccount.ps1"
+  }
+}
