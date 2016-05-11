@@ -46,7 +46,7 @@
 #
 
 # Note: Because the $ErrorActionPreference is "Stop", this script will stop on first failure.  
-$ErrorActionPreference = "stop"
+#$ErrorActionPreference = "stop"
 
 ###################################################################################################
 
