@@ -1,1 +1,0 @@
-Powershell Set-ExecutionPolicy RemoteSigned
