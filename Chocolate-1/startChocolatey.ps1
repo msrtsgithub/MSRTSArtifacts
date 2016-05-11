@@ -39,7 +39,7 @@ $group.add("WinNT://$env:ComputerName/$userName")
 $secPassword = ConvertTo-SecureString $password -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential("$env:COMPUTERNAME\$($username)", $secPassword)
 
-$command = "echo 123 > C:\Users\Admin\Desktop\abc.txt"
+$command = "reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f"
 
 # Run Chocolatey as the artifactInstaller user
 Enable-PSRemoting –force
