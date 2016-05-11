@@ -1,7 +1,7 @@
 Param(
     # comma- or semicolon-separated list of Chocolatey packages.
     [ValidateNotNullOrEmpty()]
-    [Parameter(Mandatory=$True)]
+    [Parameter(Mandatory=$false)]
     [string] $packageList
 )
 
@@ -39,7 +39,7 @@ $group.add("WinNT://$env:ComputerName/$userName")
 $secPassword = ConvertTo-SecureString $password -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential("$env:COMPUTERNAME\$($username)", $secPassword)
 
-$command = "echo 123 > c:\temp\abc.txt"
+$command = "echo 123 > C:\Users\Admin\Desktop\abc.txt"
 
 # Run Chocolatey as the artifactInstaller user
 Enable-PSRemoting –force
@@ -47,7 +47,7 @@ Invoke-Command -FilePath $command -Credential $credential -ComputerName $env:COM
 Disable-PSRemoting -Force
 
 # Delete the artifactInstaller user
-$cn.Delete("User", $userName)
+#$cn.Delete("User", $userName)
 
 # Delete the artifactInstaller user profile
-gwmi win32_userprofile | where { $_.LocalPath -like "*$userName*" } | foreach { $_.Delete() }
+#gwmi win32_userprofile | where { $_.LocalPath -like "*$userName*" } | foreach { $_.Delete() }
