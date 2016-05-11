@@ -11,6 +11,6 @@
   "targetOsType": "Windows",
   "runCommand": {
   	"commandToExecute": "PowerShellPolicyChange.cmd"
-    "commandToExecute": "powershell.exe -executionpolicy bypass -File FiddlerInstall.ps1"
+    	"commandToExecute": "powershell.exe -executionpolicy bypass -File FiddlerInstall.ps1"
   }
 }
