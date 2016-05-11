@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
-  "title": "Custom Application",
-  "description": "Using this application, we can create an msxml file.",
+  "title": "Adobe Artifact",
+  "description": "Using this application, we can install the adobe artifact.",
   "tags": [
     "Windows",
     "Admin",
