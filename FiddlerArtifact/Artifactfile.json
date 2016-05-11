@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
   "title": "Fiddler Artifact",
-  "description": "Using this application, we can create an msxml file.",
+  "description": "Using this application, we can install fiddler on VM.",
   "tags": [
     "Windows",
     "Admin",
