@@ -43,7 +43,12 @@ $command = "reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Termina
 
 # Run Chocolatey as the artifactInstaller user
 Enable-PSRemoting –force
-Invoke-Command -FilePath $command -Credential $credential -ComputerName $env:COMPUTERNAME -ArgumentList $packageList
+Invoke-Command -FilePath $command -Credential $credential -ComputerName $env:COMPUTERNAME
+$command="netsh firewall set service remoteadmin enable" 
+Invoke-Command -FilePath $command -Credential $credential -ComputerName $env:COMPUTERNAME
+$command="netsh firewall set service remotedesktop enable"
+Invoke-Command -FilePath $command -Credential $credential -ComputerName $env:COMPUTERNAME
+
 Disable-PSRemoting -Force
 
 # Delete the artifactInstaller user
